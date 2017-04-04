@@ -12660,10 +12660,10 @@ Default GPU Device: /gpu:0
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="n">batches</span> <span class="o">=</span> <span class="n">get_batches</span><span class="p">(</span><span class="n">int_text</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">seq_length</span><span class="p">)</span>
-<span class="n">writer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="s1">&#39;./summary/1&#39;</span><span class="p">)</span>
+<span class="c1">#writer = tf.summary.FileWriter(&#39;./summary/1&#39;)</span>
 
 <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">(</span><span class="n">graph</span><span class="o">=</span><span class="n">train_graph</span><span class="p">)</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
-    <span class="n">writer</span><span class="o">.</span><span class="n">add_graph</span><span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">graph</span><span class="p">)</span>
+    <span class="c1">#writer.add_graph(sess.graph)</span>
     <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">())</span>
 
     <span class="k">for</span> <span class="n">epoch_i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_epochs</span><span class="p">):</span>
